@@ -33,6 +33,13 @@ public class WebConfig {
 		return requestMappingHandlerAdapter;
 	}
 
+	/***
+	 * config a converter 
+	 * set character as UTF-8
+	 * banxia
+	 * 2016年4月22日 下午5:20:42
+	 * @return
+	 */
 	@Bean
 	public MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter() {
 		MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
@@ -57,7 +64,6 @@ public class WebConfig {
 
 	/***
 	 * config a view resolver banxia 2016年4月19日 下午6:52:48
-	 * 
 	 * @return
 	 */
 	@Bean

@@ -11,6 +11,9 @@
 		<spring.version>4.2.5.RELEASE</spring.version>
 		<log4j.version>1.2.17</log4j.version>
 		<jstl.version>1.2</jstl.version>
+		<spring.redis.version>1.7.1.RELEASE</spring.redis.version>
+		<jedis.version>2.8.0</jedis.version>
+		<spring.session.version>1.1.1.RELEASE</spring.session.version>
 	</properties>
 	<dependencies>
 
@@ -50,7 +53,21 @@
 			<version>${spring.version}</version>
 		</dependency>
 
+		<!-- spring for redis -->
 
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+			<version>${spring.redis.version}</version>
+		</dependency>
+		<!-- spring for session -->
+
+
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session</artifactId>
+			<version>${spring.session.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>log4j</groupId>
@@ -86,6 +103,13 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.4.4</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>${jedis.version}</version>
 		</dependency>
 
 		<dependency>
