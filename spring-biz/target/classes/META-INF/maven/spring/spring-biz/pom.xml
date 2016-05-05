@@ -16,6 +16,7 @@
 		<spring.session.version>1.1.1.RELEASE</spring.session.version>
 		<slf4j.version>1.7.21</slf4j.version>
 		<servlet.version>3.1.0</servlet.version>
+		<shiro.version>1.2.4</shiro.version>
 	</properties>
 	<dependencies>
 
@@ -68,8 +69,8 @@
 			<artifactId>spring-session</artifactId>
 			<version>${spring.session.version}</version>
 		</dependency>
-		
-		
+
+
 
 		<dependency>
 			<groupId>log4j</groupId>
@@ -115,18 +116,50 @@
 		</dependency>
 
 
-<dependency>
-	<groupId>org.slf4j</groupId>
-	<artifactId>slf4j-log4j12</artifactId>
-	<version>${slf4j.version}</version>
-</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+
+		<!-- apache shiro -->
+
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-web</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-aspectj</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-cas</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
 
 
-<dependency>
-	<groupId>javax.servlet</groupId>
-	<artifactId>javax.servlet-api</artifactId>
-	<version>${servlet.version}</version>
-</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>spring</groupId>

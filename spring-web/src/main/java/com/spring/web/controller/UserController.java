@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
+import org.apache.shiro.SecurityUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,10 +18,10 @@ public class UserController {
 	@RequestMapping("/say")
 	@ResponseBody
 	public String say(HttpServletRequest request){
-		Object user = request.getSession().getAttribute("user");
+		Object user = SecurityUtils.getSubject().getSession().getAttribute("user");
 		if (user == null) {
 			logger.info("session user is null");
-			request.getSession().setAttribute("user", "动态");
+			SecurityUtils.getSubject().getSession().setAttribute("user", "动态");
 		} else {
 			logger.info("session user is not  null");
 		}
